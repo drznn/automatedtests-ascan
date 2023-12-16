@@ -31,14 +31,14 @@ O projeto utiliza BDD como metodologia de desenvolvimento de testes. BDD é uma 
 
 O repositório está organizado da seguinte forma:
 
-|-- src
-| |-- tests
-| |-- cadastroUsuario.test.ts
-| |-- login.test.ts
-|-- package.json
-|-- tsconfig.json
-|-- playwright.config.ts
-|-- README.md
+- |-- src
+- | |-- tests
+- | |-- cadastroUsuario.test.ts
+- | |-- login.test.ts
+- |-- package.json
+- |-- tsconfig.json
+- |-- playwright.config.ts
+- |-- README.md
 
 - **src/tests**: Contém os arquivos de teste para as funcionalidades de cadastro de usuário e login.
 - **package.json**: Arquivo de configuração do Node.js que lista as dependências do projeto.
