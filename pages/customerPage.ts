@@ -4,7 +4,7 @@ export const customerLocators = {
     main: {},
 }
 
-export class customerPage {
+export class CustomerPage {
     readonly page: Page;
 
     constructor(page: Page){
