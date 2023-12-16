@@ -1,7 +1,12 @@
 import { Page } from '@playwright/test'
 
 export const addCustomerLocators = {
-    main: {},
+    main: {
+        firstName: "//input[@placeholder='First Name']",
+        lastName: "//input[@placeholder='Last Name']",
+        postCode: "//input[@placeholder='Post Code']",
+        addCustomerBtn: "//button[@type='submit']"
+    },
 }
 
 export class AddCustomerPage {

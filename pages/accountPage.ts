@@ -4,7 +4,7 @@ export const accountLocators = {
     main: {},
 }
 
-export class accountPage {
+export class AccountPage {
     readonly page: Page;
 
     constructor(page: Page){
