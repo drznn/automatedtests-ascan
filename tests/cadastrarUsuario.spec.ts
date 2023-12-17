@@ -4,7 +4,6 @@ import { addCustomerLocators } from "../pages/addCustomerPage";
 import { ManagerPage } from "../pages/managerPage";
 
 
-
 test.beforeEach(async ({ page }) => {
     const url = 'https://www.way2automation.com/angularjs-protractor/banking/#/login';
     await page.goto(url);
@@ -14,24 +13,27 @@ test.afterAll(async ({ page }) => {
     await page.close();
 });
 
-test('Cadastrar Usuario', async ({ page }) => {
+test('Cadastrar Novo Usuario', async ({ page }) => {
+    //Arrange
     const firstname = 'Andre';
     const lastname = 'Albuquerque';
-    const postcode = '61800000';
-
+    const postcode = '61800-000';
     const homePage = new HomePage(page);
-    await homePage.navigateToAddCustomerPage(page);
-
     const managerPage = new ManagerPage(page);
+
+    //Act
+    await homePage.navigateToAddCustomerPage(page);
     await managerPage.fillCustomerData(page,firstname,lastname,postcode);
-    
     await page.locator(addCustomerLocators.main.addCustomerBtn).click();
-   
     await managerPage.navigateToCustomersList(page);
 
+    //Assert
     await expect (page.locator(`//td[normalize-space()='${firstname}']`)
      && page.locator(`//td[normalize-space()='${lastname}']`)
      && page.locator(`//td[normalize-space()='${postcode}']`)).toBeVisible();
 
-     await page.waitForTimeout(5000);
+    //Método Wait feito Somente para visualização na apresentação
+    await page.waitForTimeout(2000);
   });
+
+  

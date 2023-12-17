@@ -1,7 +1,9 @@
 import { Page } from '@playwright/test'
 
 export const accountLocators = {
-    main: {},
+    main: {
+        userAccountName: "//span[@class='fontBig ng-binding']"
+    },
 }
 
 export class AccountPage {
