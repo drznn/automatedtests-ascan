@@ -16,11 +16,11 @@ O projeto é desenvolvido utilizando o Framework [Playwright](https://playwright
 
 
 
-## Testes Automatizados com Playwright e Padrão de Projeto POM
+## Testes Automatizados com Playwright e Padrão de Projeto Page Object Model (POM)
 
-## Introdução
+ O padrão de projeto utilizado para organizar e manter os testes é o POM (Page Object Model).
 
-Este repositório contém testes automatizados desenvolvidos usando o Playwright, uma poderosa ferramenta de automação de browser. O padrão de projeto utilizado para organizar e manter os testes é o POM (Page Object Model).
+Este repositório contém testes automatizados desenvolvidos usando o Playwright, uma poderosa ferramenta de automação de browser.
 
 ## Estrutura do Projeto
 
