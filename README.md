@@ -30,15 +30,15 @@ O repositório está organizado da seguinte forma:
 
 - |-- AUTOMATEDTESTS-ASCAN
 - ||-- pages
-- |||--accoutPage.ts
-- |||-- addCustomerPage.ts
-- |||-- customerListPage.ts
-- |||-- customerPage.ts
-- |||-- homePage.ts
-- |||-- managerPage.ts
+- | ||--accoutPage.ts
+- | ||-- addCustomerPage.ts
+- | ||-- customerListPage.ts
+- | ||-- customerPage.ts
+- | ||-- homePage.ts
+- | ||-- managerPage.ts
 - ||-- tests
-- |||-- cadastrarUsuario.spec.ts
-- |||-- loginUsuario.spec.ts
+- | ||-- cadastrarUsuario.spec.ts
+- | ||-- loginUsuario.spec.ts
 - |-- playwright.config.ts
 - |-- README.md
 
