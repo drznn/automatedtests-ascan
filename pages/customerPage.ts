@@ -4,7 +4,7 @@ import { addCustomerLocators } from "../pages/addCustomerPage";
 import { ManagerPage } from "../pages/managerPage";
 
 export const customerLocators = {
-    main: {
+    main: {                    
         customerLoginButton: "//button[normalize-space()='Customer Login']",
         selectUser: "#userSelect",
         loginUserButton: "//button[normalize-space()='Login']",
