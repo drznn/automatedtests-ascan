@@ -1,8 +1,10 @@
 import { test, expect } from "playwright/test";
-import { HomePage } from '../pages/homePage';
+import { HomePage, homeLocators } from '../pages/homePage';
 import { CustomerPage } from "../pages/customerPage";
 import { customerLocators } from "../pages/customerPage";
 import { accountLocators } from "../pages/accountPage";
+import { AddCustomerPage, addCustomerLocators } from "../pages/addCustomerPage";
+import { ManagerPage } from "../pages/managerPage";
 
 
 test.beforeEach(async ({ page }) => {
@@ -19,13 +21,12 @@ test('Login de Usuário Cadastrado', async ({ page }) => {
     const firstname = 'Andre';
     const lastname = 'Albuquerque';
     const postcode = '61800-000';
-    const homePage = new HomePage(page);
-    const customerPage = new CustomerPage(page);
+    const addCustomerPage = new AddCustomerPage(page);
 
     //Act
-    await customerPage.cadastrarCustomer(page, firstname, lastname, postcode);
-    await homePage.navigateToHomePage(page);
-    await homePage.navigateToCustomerPage(page);
+    await addCustomerPage.cadastrarCustomer(page,firstname,lastname,postcode);
+    await page.locator(homeLocators.main.home).click();
+    await page.locator(customerLocators.main.customerLoginButton).click();
     await page.locator(customerLocators.main.selectUser).selectOption(`${firstname} ${lastname}`);
     await page.locator(customerLocators.main.loginUserButton).click();
     
@@ -35,5 +36,3 @@ test('Login de Usuário Cadastrado', async ({ page }) => {
     //Método Wait feito Somente para visualização na apresentação
     await page.waitForTimeout(2000);
   });
-
-  

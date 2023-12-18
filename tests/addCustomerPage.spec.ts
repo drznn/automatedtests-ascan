@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.afterAll(async ({ page }) => {
-    await page.close();
+    // await page.close();
 });
 
 test('Cadastrar Novo Usuario', async ({ page }) => {
@@ -25,15 +25,13 @@ test('Cadastrar Novo Usuario', async ({ page }) => {
     await homePage.navigateToAddCustomerPage(page);
     await managerPage.fillCustomerData(page,firstname,lastname,postcode);
     await page.locator(addCustomerLocators.main.addCustomerBtn).click();
-    await managerPage.navigateToCustomersList(page);
+    await page.locator(addCustomerLocators.main.customersButton).click();
 
     //Assert
     await expect (page.locator(`//td[normalize-space()='${firstname}']`)
      && page.locator(`//td[normalize-space()='${lastname}']`)
      && page.locator(`//td[normalize-space()='${postcode}']`)).toBeVisible();
 
-    //Método Wait feito Somente para visualização na apresentação
-    await page.waitForTimeout(2000);
   });
 
   
