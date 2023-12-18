@@ -14,11 +14,13 @@ O site de teste está disponível no seguinte link: [Way2Automation Banking](htt
 O projeto é desenvolvido utilizando o Framework [Playwright](https://playwright.dev/) na linguagem [TypeScript](https://www.typescriptlang.org/).
 
 
-
-
 ## Testes Automatizados com Playwright e Padrão de Projeto Page Object Model (POM)
 
- O padrão de projeto utilizado para organizar e manter os testes é o POM (Page Object Model).
+O padrão de projeto utilizado para organizar e manter os testes é o POM (Page Object Model).
+
+O Padrão de Projeto Page Object Model (POM) é uma abordagem de design usada em automação de testes para criar uma estrutura organizada e reutilizável. O POM é comumente utilizado em testes de interface de usuário, como testes de navegador web, e tem o objetivo de separar a lógica de teste da lógica de interação com a interface do usuário.
+
+A ideia central do POM é representar cada página da aplicação como uma classe separada. Essa classe contém todos os elementos da página (como botões, campos de entrada, etc.) e os métodos necessários para interagir com esses elementos. Os testes, então, usam essas classes de "Page Object" para realizar ações na interface do usuário.
 
 Este repositório contém testes automatizados desenvolvidos usando o Playwright, uma poderosa ferramenta de automação de browser.
 
