@@ -59,6 +59,41 @@ O projeto utiliza BDD como metodologia de desenvolvimento de testes. BDD é uma 
 [Gherkin](https://cucumber.io/docs/gherkin/) é a linguagem de especificação utilizada para descrever cenários de teste em BDD. Ela é fácil de ler e escrever, permitindo uma colaboração eficaz entre as equipes de desenvolvimento e teste.
 
 
+# Feature: Cadastro de Usuário
+
+## Scenario: Cadastrar um novo usuário
+
+### Given
+- Que eu estou na homepage
+
+### When
+- Eu clico na página de login do manager
+- E eu clico no botão de adicionar customer
+- E eu preencho o formulário de cadastro com firstname, lastname e post code
+- E eu clico em adicionar customer
+
+### Then
+- O sistema deve cadastrar o customer na lista de customers
+
+---
+
+# Feature: Login de Usuário Cadastrado
+
+## Scenario: Realizar login com usuário selecionado
+
+### Given
+- Que usuário não logado está na homepage
+
+### And
+- Clica no botão customer login
+- E seleciona o customer de acordo com o firstname e lastname desejado
+- E clica no botão login
+
+### Then
+- O usuário deve realizar o login e ir para a tela de account com seu firstname e lastname, dados da conta e ações de transação da conta
+
+
+
 - **AUTOMATEDTESTS-ASCAN/tests**: Contém os arquivos de teste para as funcionalidades de cadastro de usuário e login.
 - **package.json**: Arquivo de configuração do Node.js que lista as dependências do projeto.
 - **playwright.config.ts**: Configurações específicas do Playwright.
