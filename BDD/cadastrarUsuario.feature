@@ -1,4 +1,4 @@
-Feature: Cadastro de Usuário
+Feature: Cadastrar Novo Usuario
 
   Scenario: Cadastrar um novo usuário
     

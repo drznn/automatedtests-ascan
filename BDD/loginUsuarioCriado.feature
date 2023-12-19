@@ -1,4 +1,4 @@
-Feature: Login do Usuário Selecionado
+Feature: Login de Usuário Cadastrado
 
   Scenario: Realizar login com usuário selecionado
 

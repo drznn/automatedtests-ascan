@@ -32,7 +32,4 @@ test('Login de Usuário Cadastrado', async ({ page }) => {
     
     //Assert
     await expect (page.locator(accountLocators.main.userAccountName)).toHaveText(`${firstname} ${lastname}`);
-
-    //Método Wait feito Somente para visualização na apresentação
-    await page.waitForTimeout(2000);
   });
